@@ -4,7 +4,7 @@
   "description": "A wedding website with loads of features.",
   "main": "npmfile.js",
   "scripts": {
-    "build":"npm build"
+    "build": "npm build"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "animate.css": "^3.7.2",
+    "build-release": "^1.0.18",
     "font-awesome": "^4.7.0",
     "waypoints": "^4.0.1"
   }
