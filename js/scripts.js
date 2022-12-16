@@ -176,6 +176,9 @@ $(document).ready(function () {
     });
 
     /********************** Add to Calendar **********************/
+
+
+    /*
     var myCalendar = createCalendar({
         options: {
             class: '',
@@ -205,13 +208,37 @@ $(document).ready(function () {
     });
 
     $('#add-to-cal').html(myCalendar);
-
+*/
 
     /********************** RSVP **********************/
+
+
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
-        var data = $(this).serialize();
+       
+       /* var data = $(this).serialize();*/
 
+        $.ajax({
+            type: "POST",
+            url: "https://prod-19.australiasoutheast.logic.azure.com:443/workflows/2529ae1baab3466fb39324da9c64844e/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=AuyfTTx6tufMSkPmGMOihmfVnJGX3TtN3-3AKznQuAY",
+            data: JSON.stringify(data),// now data come in this function
+            contentType: "application/json; charset=utf-8",
+            crossDomain: true,
+            dataType: "json",
+            success: function (data, status, jqXHR) {
+               console.log(status);
+            },
+
+            error: function (jqXHR, status) {
+                console.log(data);
+                $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Could not save your rsvp :(. Try again.'));
+          
+ 
+            }
+         });
+
+            
+        /*
       
         if ($('#name').length > 1)
         {
@@ -239,6 +266,8 @@ $(document).ready(function () {
                 });
         }
     });
+*/
+
 
 });
 
