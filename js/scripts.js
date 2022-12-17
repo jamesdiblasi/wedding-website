@@ -217,7 +217,7 @@ $(document).ready(function () {
         e.preventDefault();
        
        /* var data = $(this).serialize();*/
-
+        console.log('in the submit func')
         $.ajax({
             type: "POST",
             url: "https://prod-19.australiasoutheast.logic.azure.com:443/workflows/2529ae1baab3466fb39324da9c64844e/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=AuyfTTx6tufMSkPmGMOihmfVnJGX3TtN3-3AKznQuAY",

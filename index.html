@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/font-awesome.min.css">
+
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body id="top">
@@ -45,16 +46,16 @@
                 <div class="logo"><a href="#"><img src="img/jng-logo.png" alt="Logo"></a></div>
                 <div class="header-nav">
                     <nav> 
-                        <ul class="primary-nav">]
+                        <ul class="primary-nav">
                     <!-- 
-                            <li><a href="#intro">How we met</a></li>-->
+                            <li><a href="#intro">How we met</a></li>
                             <li><a href="#events">Events</a></li>
                             <li><a href="#instagram">Instagram</a></li>
                             <li><a href="#eng-pics">Engagement</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
+                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>!-->
                         </ul>
                         <ul class="member-actions">
-                            <li><a href="#map" class="login">Venue</a></li>
+                            <li><a href="#map" class="login">contact</a></li>
                             <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                         </ul>
                     </nav>
@@ -130,23 +131,34 @@
                             <div class="form-input-group">
                                 <i class="fa fa-envelope"></i><input type="email" name="email" class=""
                                                                      placeholder="Your email"
-                                                                     required>
+                                                                     required id="email">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i><input name="name" class=""
                                                                  placeholder="Full name"
-                                                                 required>
+                                                                 required id="name">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Husband/Wife or kids"
+                                <i class="fa fa-user"></i><input type="number" name="extras" class="" min="0"
+                                                                  max="8"
+                                                                  placeholder="Partner + kids" id="attendees"
+                                                                  >
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="text" name="message" class="" rows="4"
+                                                                  placeholder="Leave us a message" id="message"
                                                                   >
                             </div>
                         </div>
@@ -158,26 +170,18 @@
                     <button class="btn-fill rsvp-btn">
                       I'll be there.
                     </button>
-                 
+                    <button type="button" class="btn-non rsvp-btn">
+                        Sorry, I can't be there. 
+                      </button>
+                     
                 </form>
-                <button class="btn-non rsvp-btn">
-                    Sorry, I can't be there. 
-                  </button>
+                 
+                
             </div>
         </div>
     </div>
 </section>
 
-<section id="video-bg" class="hidden-sm hidden-xs">
-    <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://vimeo.com/200840078?embedded=true&source=vimeo_logo&owner=61956909',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:80, stopAt:259, opacity:1}">
- 
-        </div>
-    <div id="video-content">
-        <h5>Lucca Italy</h5>
-        <p>L'Arancera</p>
-    </div>
-</section>
 <section id="intro">
     <div class="container">
         <div class="row">
@@ -231,7 +235,7 @@
 </section>
 
 
-
+<!--
 
 
 <section class="events section-padding" id="events">
@@ -243,38 +247,19 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
-                <div class="wp3"> <!--
-                    <p><strong>5th November</strong></p>
-
-                    <h5>Mehndi <span class="time">1PM - 5PM</span></h5>
-                    <p>It's one of the oldest traditional Indian pre wedding ceremony where the bride and groom
-                        attend the event together and a professional mehndi artist applies
-                        mehndi to the bride's hands and feet. This will be having a celebratory
-                        festival feel to it with people wearing vibrant clothes and dancing, singing, playing
-                        games and a lot more.</p>-->
+                <div class="wp3"> 
                 </div>
-                <div class="wp5"> <!--
-                    <h5>Cocktail Night <span class="time">7PM - 12AM</span></h5>
-                    <p>This event is no way close to ethnic. The bride & groom would like to have some "shots before the
-                        knot". With booze flowing down the floor and the western attire on, everyone would be busy
-                        showing off their new moves on the stage which they have finely honed. Lastly, expect some beer
-                        pong matches & karaoke for sure.</p>-->
+                <div class="wp5"> 
                 </div>
             </div>
 
         </div>
         <div class="row section-padding">
             <div class="col-md-4 col-md-offset-4 text-center">
-                <!--
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
-                </a>-->
+               
             </div>
         </div>
-        <!--<div class="row">
-            <div class="col-xs-12 section-border section-padding">
-            </div>
-        </div>-->
+    
     </div>
 
     <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
@@ -286,36 +271,34 @@
                     <h3 class="text-center section-padding">Ugh... dress codes?</h3>
                     <h5>Mehndi <span class="time">1PM - 5PM</span></h5>
                     <p>
-                     
+            
             
                     </p>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+            </div>
+        </div>
+    </div>
 
 </section>
+!-->
 
 <section id="map" class="section-padding">
     <div class="text-center">
-        <h3>Have questions?</h3>
-        <p>We understand adventuring so far is a tough ask, so if you have any questions / need help with logistics, getting to and from Italy or other general travel advice please give us a call, we are so happy to help. </p>
-    </div>
-    <div id="map-canvas"></div>
+
     <div id="map-content-wrapper" class="container pointer-events-none">
         <div class="row">
-            <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
+            <div class="col-md-12">
                 <div class="text-center">
+                    <h3>Have questions?</h3>
+                    <p class="text-center">We understand adventuring so far is a tough ask, so if you have any questions / need help with logistics, getting to and from Italy or other general travel advice please give us a call, we are so happy to help. </p>
+            
                     <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
                         <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
                     </div>
                 </div>
-                <div id="map-content" class="pointer-events-auto">
+                <div id="map-content" class="pointer-events-auto text-center">
                     <div class="row">
-                        <div class="col-md-6">
-                            <h5>L'Arancera Villa Grabau</h5>
-                            <p>L'Arancera / Villa Grabau is located in a small town Lucca, Italy. </p>
-                        </div>
+                  
                         <div class="col-md-6">
                             <h5>James</h5>
                             <p><i class="fa fa-mobile"></i> <a href="tel://+61412352272">+61 412 352 272</a><br>
@@ -332,8 +315,7 @@
                           
                         </div>
                         <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
-                                map</a>
+                     
                         </div>
                     </div>
                 </div>
